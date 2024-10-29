@@ -1,0 +1,61 @@
+.fotter-buttom {
+    border-top: 1.5px solid green;
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    }
+
+.fotter-buttom :hover {
+    color: crimson;
+    letter-spacing: 12px;
+    cursor: pointer;
+}
+.pt {
+    color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -200px;
+}
+
+h4:hover {
+    color: chartreuse;
+    word-spacing: 10px;
+    letter-spacing: 7px;
+    font-size: 25px;
+}
+.fb{
+    width: 45px;
+    cursor: pointer;
+}
+.zl {
+    width: 45px;
+    cursor: pointer;
+}
+.msg {
+    width: 60px;
+    cursor: pointer;
+}
+.tt {
+    width: 45px;
+    cursor: pointer;
+}
+.itg {
+    width: 45px;
+    cursor: pointer;
+}
+.ytb {
+    width: 65px;
+    cursor: pointer;
+}
+.logo {
+   text-align: center;
+   font-size: 45px;
+   background-color: azure;
+   border: 1px double violet;
+}
+.logo:hover {
+    background-color: darkslategrey;
+}

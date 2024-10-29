@@ -1,0 +1,35 @@
+.image-row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.image-row img {
+    width: 650px;
+    height: auto;
+}
+.image-row img:hover {
+    filter: brightness(200%);
+    transform:scale(1.05);
+}
+
+.banner-container {
+    transition: margin-left 2s 0.5s ease-in-out;
+    -moz-transition: margin-left 2s 0.5s ease-in-out;
+    -webkit-transition: margin-left 2s 0.5s ease-in-out;
+
+    }
+.banner-container:hover {
+    filter: brightness(50%);
+}
+.banner{
+   background-position: center;
+}
+.banner img {
+    width: 100vw;
+    height: auto;
+}
+
+ntk:hover {
+    background-color:greenyellow ;
+
+}

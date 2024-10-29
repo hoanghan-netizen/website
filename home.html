@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sanpham.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="theend.css">
+    <link rel="stylesheet" href="dangnhap.js">
+   
+    <style>
+        .vb-text {
+            column-count: 4;
+            column-rule: 2px solid violet;
+        }
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 190px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            padding: 20px;
+            border-color:white;
+            color:pink;
+            background-color:gray;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 25px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+
+        /* Hiệu ứng xuất hiện từ từ */
+        .show {
+            display: block;
+            animation: fadeIn 0.5s, fadeOut 0.5s 4s; /* Tự động ẩn sau 4s */
+        }
+
+        /* Hiệu ứng mờ dần khi xuất hiện */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Hiệu ứng mờ dần khi ẩn */
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<div>
+<body style="background-color:beige">
+    <div id="alertBox" class="custom-alert">
+        CHÀO MỪNG BẠN ĐẾN VỚI WEBSITE 
+    </div>
+    <script>
+        function showAutoAlert() {
+        var alertBox = document.getElementById("alertBox");
+        alertBox.classList.add("show"); // Thêm lớp 'show' để hiển thị alert
+
+        // Sau 4.5 giây, xóa lớp 'show' để ẩn alert
+        setTimeout(function() {
+            alertBox.classList.remove("show");
+        }, 4500);
+    }
+
+    // Tự động hiển thị thông báo sau khi tải trang
+    window.onload = function() {
+        showAutoAlert(); // Gọi hàm để hiển thị thông báo ngay khi tải trang
+    };
+
+    </script>
+    <img style="width: 100%;" src="https://img.lazcdn.com/us/domino/d429e2dd-c937-4262-bde7-1346fd21b5e5_VN-1188-80.gif_2200x2200q80.gif_.webp" alt="">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="./dangnhap.html">Đăng Nhập</a></li>
+            <li><a href="./dangki.html"> Đăng Kí</a></li>
+            <li><a href="./home.html"> Trang Chủ </a>
+        </ul>
+
+
+    </nav>
+    <div class="banner-container">
+        <img style="width: 100%;" src="https://img.lazcdn.com/us/domino/f797f5fa-42b4-4761-874a-88db2bb6d88d_VN-1976-688.jpg_2200x2200q80.jpg"  alt= "banner">
+    </div>
+    <div class="item-row">
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/c3310c8f5df5824bef18cadb4e5fdd88.jpg_400x400q80.jpg" alt="">
+            <h3>Combo 50 gói trà túi lọc giảm cân</h3>
+            <p>Giá: 65.000 VND</p>
+            <button class="by-button" onclick="muasanpham('sanpham1.html')">Mua Ngay</button>
+            <script>
+                function muasanpham(sanpham1){
+                    window.location.href = sanpham1;
+                }
+            </script>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/a66509b0c653bdb083a3727d934f8372.png_400x400q80.png" alt="">
+            <h3>Lon sữa bột Pediasure vị vani 1.6kg</h3>
+            <p>Giá: 1.075.000 VND </p>
+            <button class="by-button" onclick="muasanpham()">Mua Ngay</button>
+            <script>
+                function muasanpham(sanpham2){
+                    window.location.href = sanpham2;
+                }
+            </script>
+
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/42c4036e4a237690cbb325f872b90372.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>17KM Lucky Crystal Beads Bracelet</h3>
+            <p>25.000 VND -47% </p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/e43cdb738a93a08eb93c2141d272803e.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>(freeship) 1 Thùng 30 gói giấy ăn gấu trúc </h3>
+            <p>Giá: 65.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/a030b10e7e2feef48a14544dde47e668.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Bao tay chơi game Liên Quân ,PUPG, Free Fire</h3>
+            <p>Giá: 23.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/ff/kf/S58214bd9d41a41b98871017ae4a834ebL.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Máy say mini cần tay đa năng cao cấp say tỏi ớt hành ra củ quả dung tích 250ml</h3>
+            <p>Giá: 350.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()"> Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/26733cb7dd1afeee20d734148c185048.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Gấu bông trái bơ nhỏ xinh cho bé </h3>
+            <p>Giá: 65.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/6437c30ed210edeab26e85fb71ccfb34.jpg_400x400q80.jpg_.webp" alt="">
+            <h3> Dép caro Nam bản to quai nút </h3>
+            <p>Giá: 125.000 VND  -50%</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/7077022e88bb75407000917095abc482.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Quần Short Unisex nam nữ chất vải cotton thoáng mát</h3>
+            <p>Giá: 120.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/ec905ead678f5a4d220a457fd0b4cbda.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Combo Bánh tráng phơi sương tép mỡ và sốt bơ béo ngậy</h3>
+            <p>Giá: 57.000 VND</p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/999a78a8b3473d77d81dda616c78ae94.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Bộ đồ mặc ở nhà chất liệu thun co giãn thoải mái , dễ chịu</h3>
+            <p>Giá: 127.000 VND  -25% </p>
+            <button class="by-button">Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/dd5b26a85da69fd277da4639772aecfb.jpg_400x400q80.jpg_.webp" alt="">
+            <h3>Áo Hoodie chống nắng Unisex nam nữ form rộng </h3>
+            <p>Giá: 165.000 VND</p>
+            <button class="by-button"> Mua Ngay</button>
+            <button class="by-giohang"onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/239bc1d359974e47244ac060555555b8.png_400x400q80.png_.webp" alt="">
+            <h3>Thùng bánh mì mix đủ vị cho mọi người thoải mái lựa chọn</h3>
+            <p>Giá: 69.000 VND</p>
+            <button class="by-button"> Mua Ngay</button>
+            <button class="by-giohang" onclick="addToCart">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+        <div class="item">
+            <img src="https://img.lazcdn.com/g/p/07832a55caffcdfa216713285ebce261.png_400x400q80.png_.webp" alt="">
+            <h3>Máy sấy tóc 2 chiều nóng lạnh công xuất lớn </h3>
+            <p>Giá: 265.000 VND</p>
+            <button class="by-button"> Mua Ngay</button>
+            <button class="by-giohang"onclick="addToCart()">Thêm Vào Giỏ Hàng</button>
+            <script>
+                function addToCart() {
+                    alert("Sản Phẩm đã được thêm vào giỏ hàng");
+                }
+            </script>
+        </div>
+    </div>
+<div class="image-row">
+  <img src="https://img.lazcdn.com/us/domino/474e65da5a6ed1a078c0e66e929d378b.png_2200x2200q80.png" alt="">
+  <img src="https://img.lazcdn.com/us/domino/f3947c0bcaf171d91ac032e2820bbb88.png_2200x2200q80.png" alt="">
+  <img src="https://img.lazcdn.com/us/domino/37713475645bb0698c30715499fdef2d.png_2200x2200q80.png" alt="">
+</div>
+
+<h4 style="text-align: center; font-weight: bold;font-size:35px; cursor: pointer;">Han's first website</h4>
+    <div class="colum">
+        <h2 style="text-align: center;">website it is nober</h2>
+    </div>
+
+    <div class="vb-text">
+        Welcome to Han Baw – Your Ultimate Fashion Destination
+
+    At Han Baw, we believe that fashion is more than just clothing; it's an expression of your unique style and personality. Our website offers a carefully curated selection of the latest trends and timeless pieces, designed to help you create a wardrobe that reflects who you are.
+    
+    What We Offer:
+    
+    Wide Range of Styles: Whether you're looking for casual wear, office attire, or something special for an evening out, Han Baw has it all. Our collection includes everything from trendy streetwear to elegant dresses, ensuring that you'll find the perfect outfit for any occasion.
+    
+    High-Quality Fabrics: We are committed to providing you with clothing made from the finest materials. Our garments are not only stylish but also durable, offering you comfort and quality that lasts.
+    
+    Affordable Prices: Fashion should be accessible to everyone. That's why we offer competitive prices on all our products, making it easy for you to stay stylish without breaking the bank.
+    
+    Easy Shopping Experience: Our user-friendly website is designed to make your shopping experience as smooth as possible. With clear product descriptions, multiple images, and a simple checkout process, finding and purchasing your favorite items is just a click away.
+    
+    Customer Satisfaction: Your satisfaction is our top priority. We offer hassle-free returns and exchanges, and our customer support team is always ready to assist you with any inquiries.
+    
+    Join the Han Baw Community:
+    
+    Stay connected with the latest fashion trends and exclusive offers by subscribing to our newsletter and following us on social media. At Han Baw, we're more than just a clothing store – we're a community of fashion enthusiasts.
+        Affordable Prices: Fashion should be accessible to everyone. That's why we offer competitive prices on all our products, making it easy for you to stay stylish without breaking the bank.
+    
+    Easy Shopping Experience: Our user-friendly website is designed to make your shopping experience as smooth as possible. With clear product descriptions, multiple images, and a simple checkout process, finding and purchasing your favorite items is just a click away.
+    
+    Customer Satisfaction: Your satisfaction is our top priority. We offer hassle-free returns and exchanges, and our customer support team is always ready to assist you with any inquiries.
+
+    </div>
+<div  class="logo">
+    <img  class = "fb" src="https://png.pngtree.com/png-clipart/20190613/original/pngtree-facebook-icon-png-image_3560488.jpg" alt="logofb">
+    <img  class ="zl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ETQoxS7mOijO11BT7oTsZGsdh7fNF62-7A&s" alt="logozalo">
+    <img class ="msg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZZxIlz0_MZOoCrP-2rCOvAlSMyIZNIy3umA&s" alt="logomess">
+    <img  class ="tt" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWlgWTbmUn8vTUb8RgYqoecQKRdABeErk2SYO--3grgsRktNciBHLYtj9GH2qGMtSgK_U&usqp=CAU" alt="logotiktok">
+    <img class = "ytb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUom3vyBgUv3nUXIEfpAMdsuv0srMoZ6pcbw&s" alt="logoyoutube">
+</div>
+<div class="fotter-buttom">
+    <p>&copy; 2024 Hoàng Văn Hân </p>
+
+</div>
+</div>
+</body>
+
+</html>

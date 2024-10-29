@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tùy chỉnh Hộp Thông Báo</title>
+    <style>
+        /* Định dạng hộp thông báo */
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hiệu ứng mờ dần */
+        .show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        /* Định dạng nút đóng */
+        .close-btn {
+            background-color: white;
+            color: #f44336;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        /* Hiệu ứng xuất hiện từ từ */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hộp thông báo tùy chỉnh -->
+<div id="alertBox" class="custom-alert">
+    Đây là thông báo tùy chỉnh!
+    <br>
+    <button class="close-btn" onclick="closeAlert()">Đóng</button>
+</div>
+
+<!-- Nút kích hoạt thông báo -->
+<button onclick="showAlert()">Hiển thị Thông báo</button>
+
+<script>
+    // Hàm hiển thị hộp thông báo tùy chỉnh
+    function showAlert() {
+        var alertBox = document.getElementById("alertBox");
+        alertBox.classList.add("show"); // Thêm lớp 'show' để hiển thị alert
+    }
+
+    // Hàm đóng hộp thông báo tùy chỉnh
+    function closeAlert() {
+        var alertBox = document.getElementById("alertBox");
+        alertBox.classList.remove("show"); // Xóa lớp 'show' để ẩn alert
+    }
+</script>
+
+</body>
+</html>
